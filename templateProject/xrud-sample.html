@@ -7,9 +7,9 @@
     	<!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
-<script src="lib/json2html.js"></script>
+<script src="js/json2html.js"></script>
 
-<script type="text/javascript" src="lib/configFire.js"></script>
+<script type="text/javascript" src="js/configFire.js"></script>
 
     <title>Document</title>
 </head>
@@ -17,12 +17,12 @@
     
     <div id="output"></div>
 
-    <script src="lib/xrud.js"></script>
+    <script src="js/xrud.js"></script>
     <script>
 var listaGlobal = "";
 
         let dataDemo = {
-                    nome: "casasBahia", Local: "RJ", country: "USA",
+                    nome: "supermarket", Local: "RJ", country: "atualizado 13:33",
                     capital: false, population: 1860000 };
 
                     function xrud_miniController($content){
@@ -36,9 +36,9 @@ var listaGlobal = "";
        
 
         // implementation 
-    xrud_send('empresas', 'casasBahia', dataDemo);
-    //xrud_delete('empresas', 'SF');
-    //xrud_read('empresas');
+    //xrud_send('empresas', 'supermarket', dataDemo);
+    //xrud_delete('empresas', 'supermarket');
+    xrud_read('empresas');
     </script>
 
 
