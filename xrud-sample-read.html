@@ -8,11 +8,11 @@
 
 <script src="lib/xrud.js"></script>
 <script>
-    var codigoGerado = []; //Armazena código HTML para front-end
-    const limitPage = 10; // Limita o número de registros adcionados na página
-    var countView = 0; // Configura contagem de itens 
+    var lineCode = []; //Stores HTML code for front end
+    const limitPage = 10; // Limits the number of records added to the page.
+    var countView = 0; // Set item count 
 
-    function xrud_miniController($content) { // Configura os dados que irão para a view
+    function xrud_miniController($content) { // Set the data that will go to the view.
 
         let html = json2html.transform($content, {
             '<>': 'h3',
@@ -22,8 +22,8 @@
             '<>': 'li',
             'html': '${contato}'
         }) + '<hr>';
-        codigoGerado.push(html2);
-        window.document.getElementById("xrud_ID_"+countView).innerHTML = codigoGerado[countView];
+        lineCode.push(html2);
+        window.document.getElementById("xrud_ID_"+countView).innerHTML = lineCode[countView];
         countView++;
 
     }
@@ -31,9 +31,9 @@
     function loadMiniView() {
         for (var i = 0; i < limitPage; i++) {
 
-            var condigoAtual = window.document.getElementById('output').innerHTML;
+            var currentCode = window.document.getElementById('output').innerHTML;
 
-            window.document.getElementById('output').innerHTML = condigoAtual + "<div id='xrud_ID_" + i + "'></div>";
+            window.document.getElementById('output').innerHTML = currentCode + "<div id='xrud_ID_" + i + "'></div>";
         }
     }
 

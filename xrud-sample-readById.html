@@ -1,0 +1,27 @@
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
+<script src="lib/json2html.js"></script>
+<script type="text/javascript" src="lib/configFire.js"></script>
+<div id="output"></div>
+<script src="lib/xrud.js"></script>
+<script>
+    var dataRef = firebase.firestore();
+    
+    function xrud_search($document, $where, $by){
+            dataRef.collection($document).where($where, "==", $by)
+        .get()
+        .then(function(querySnapshot) {
+        querySnapshot.forEach(function(doc) {
+            // doc.data() is never undefined for query doc snapshots
+            console.log(doc.id, " => ", doc.data());
+        });
+        })
+        .catch(function(error) {
+        console.log("Error getting documents: ", error);
+        });
+    }
+
+    xrud_search('cities', 'capital', true);
+    
+</script>

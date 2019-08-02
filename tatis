@@ -1,0 +1,29 @@
+[33mcommit ae382a430064cd37a5d1cc448074247022073876[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: paulosergioduff <paulosergioduff@gmail.com>
+Date:   Fri Aug 2 16:31:49 2019 -0300
+
+    Refatoração de página de sample-read
+
+[33mcommit d7ae0faf559a83de5a219219cf19f5f8f7bdaefe[m
+Author: paulosergioduff <paulosergioduff@gmail.com>
+Date:   Wed Jul 17 13:42:01 2019 -0300
+
+    Adição de template project
+
+[33mcommit 60920dbeceff870d85c5769eb9fa7059083cff36[m
+Author: paulosergioduff <paulosergioduff@gmail.com>
+Date:   Tue Jul 16 09:24:20 2019 -0300
+
+    Múltiplos elementos com diferentes tags HTML
+
+[33mcommit abf831e9d64b190b94f4bf5258fd03d02dd527d9[m[33m ([m[1;33mtag: v0.0.1[m[33m)[m
+Author: paulosergioduff <paulosergioduff@gmail.com>
+Date:   Tue Jul 16 08:34:47 2019 -0300
+
+    Primeira release alpho comitada
+
+[33mcommit f2ddfe83c5396fe76fd755881ae19a6af9e85363[m
+Author: Paulo Sérgio Duff <paulosergioduff@gmail.com>
+Date:   Tue Jul 16 08:11:51 2019 -0300
+
+    Initial commit
