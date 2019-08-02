@@ -1,0 +1,42 @@
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
+<script src="lib/json2html.js"></script>
+<script type="text/javascript" src="lib/configFire.js"></script>
+
+<div id="output"></div>
+
+<script src="lib/xrud.js"></script>
+<script>
+    var codigoGerado = []; //Armazena código HTML para front-end
+    const limitPage = 10; // Limita o número de registros adcionados na página
+    var countView = 0; // Configura contagem de itens 
+
+    function xrud_miniController($content) { // Configura os dados que irão para a view
+
+        let html = json2html.transform($content, {
+            '<>': 'h3',
+            'html': '${nome}'
+        });
+        let html2 = html + json2html.transform($content, {
+            '<>': 'li',
+            'html': '${contato}'
+        }) + '<hr>';
+        codigoGerado.push(html2);
+        window.document.getElementById("xrud_ID_"+countView).innerHTML = codigoGerado[countView];
+        countView++;
+
+    }
+
+    function loadMiniView() {
+        for (var i = 0; i < limitPage; i++) {
+
+            var condigoAtual = window.document.getElementById('output').innerHTML;
+
+            window.document.getElementById('output').innerHTML = condigoAtual + "<div id='xrud_ID_" + i + "'></div>";
+        }
+    }
+
+    loadMiniView();
+    xrud_read('empresas');
+</script>
