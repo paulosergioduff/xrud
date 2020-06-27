@@ -14,7 +14,7 @@
     <title>Document</title>
 </head>
 <body>
-    
+
     <div id="output"></div>
 
     <script src="lib/xrud.js"></script>
@@ -26,22 +26,22 @@ var listaGlobal = "";
                     capital: false, population: 1860000 };
 
                     function xrud_miniController($content){
-                    
+
                     var html = json2html.transform($content,{'<>':'h3','html': '${nome}'});
                     var html = html+json2html.transform($content,{'<>':'li','html': '${Local}'})+'<hr>';
                     var htmlFinal = window.document.getElementById('output').innerHTML = listaGlobal+html;
                     listaGlobal = htmlFinal;
                 }
 
-       
 
-        // implementation 
-    xrud_send('empresas', 'casasBahia', dataDemo);
+
+        // implementation
+    //xrud_send('empresas', 'casasBahia', dataDemo);
     //xrud_delete('empresas', 'SF');
-    //xrud_read('empresas');
+    xrud_read('empresas');
     </script>
 
 
-    
+
 </body>
 </html>
