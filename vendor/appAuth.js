@@ -56,7 +56,7 @@
 				//document.getElementById('btnLogOut').style.display = "inline";
 				//document.getElementById('app-content').style.display = "inline";
 
-				if (paginaLogin == true) {
+				if (XrudPageLogin == true) {
 					LoginAction();
 
 					}
