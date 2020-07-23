@@ -63,7 +63,7 @@
 			}
 				else{
 					console.log('não logado');
-				document.getElementById('btnLogOut').style.display = "none";
+				//document.getElementById('btnLogOut').style.display = "none";
 				if (XrudPageLogin != true) {
 					window.document.write('offline');
 					window.location.href = "login.html";
